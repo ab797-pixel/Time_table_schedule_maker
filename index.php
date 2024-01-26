@@ -48,10 +48,12 @@
        <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto active" href="index.php">Home</a></li>
-          <li><a class="nav-link scrollto" href="index.php?info=staffs">Staffs</a></li>
-          <li><a class="nav-link scrollto" href="index.php?info=subcodes">Subcodes</a></li>
-          <li><a class="nav-link   scrollto" href="index.php?info=classes">Classes</a></li>
-          <li><a class="nav-link scrollto" href="index.php?info=time_table">Time Table</a></li>
+          <li class="dropdown"><a href="#"><span>logIn</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <ul>
+              <li><a href="index.php?info=admin_login">Admin login</a></li>
+              <li><a href="index.php?info=staff_login">Staff login</a></li>
+            </ul>
+          </li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav> 
@@ -66,29 +68,17 @@
     if($info!="")
     {
                 
-      if($info=="staffs")
+      if($info=="admin_login")
 	   {
-	   	include('staffs.php');
+	   	include('admin_login.php');
 	   } 
-       else if($info=="subcodes")
+     else if($info=="staff_login")
 	   {
-	   	include('subcodes.php');
+	   	include('staff_login.php');
 	   }
-       else if($info=="classes")
+     else if($info=="staff_register")
 	   {
-	   	include('classes.php');
-	   }
-       else if($info=="time_table")
-	   {
-	   	include('time_table.php');
-	   }
-     else if($info=="edit_staff")
-	   {
-	   	include('edit_staff.php');
-	   }
-     else if($info=="edit_subject")
-	   {
-	   	include('edit_subject.php');
+	   	include('staff_register.php');
 	   }
      
       }

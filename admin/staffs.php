@@ -26,11 +26,9 @@ if(isset($save))
 
 ?>
 <div class="container" style="margin-top:100px;">
-    hello staff add,list,edit,delete
-   <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addStaff">
-  Add Staffs
-</button>
+        <div class="section-title">
+          <h2>Staff List</h2>
+        </div>
 <table class='table table-responsive table-bordered table-striped table-hover' style=margin:15px;>
 <tr style="font-size:20px;text-align:center;border:2px solid black;background-color: #EEA47F;color:white;">
     <th>S.No</th>

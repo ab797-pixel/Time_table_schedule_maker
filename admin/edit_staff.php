@@ -23,7 +23,6 @@
              <h2 class="section-header">EDIT Staff</h2>
              <div class="mb-3">
               <label  class="form-label">Name</label>
-             <?php ?>
               <input type="text" class="form-control"  value="<?php echo $staff_row['name']?>" name="staff_name">
             </div>
             <div class="mb-3">

@@ -15,11 +15,19 @@
    }
 ?>
 <div class="container" style="margin-top:100px;">
-    hello subcodes add,list,edit,delete;
-     <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-  Add Subject
-</button>
+         <div class="row">
+          <div class="col-md-8">
+          <div class="section-title">
+          <h2>Subject List</h2>
+        </div>
+          </div>
+          <div class="col-md-4">
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            Add Subject
+          </button>
+          </div>
+         </div>
+
 <table class='table table-responsive table-bordered table-striped table-hover' style=margin:15px;>
 <tr style="font-size:20px;text-align:center;border:2px solid black;background-color: #EEA47F;color:white;">
     <th>S.No</th>
