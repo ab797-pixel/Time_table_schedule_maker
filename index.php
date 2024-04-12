@@ -39,13 +39,13 @@
 <body>
 
   <!-- ======= Header ======= -->
-   <header id="header" class="fixed-top " style="background:gray;">
+   <header id="header" class="header d-flex align-items-center" style="background:gray;">
     
-    <div class="container d-flex align-items-center">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
       <h1 class="logo me-auto" style="text-align:center;"><a href="index.php?info=home"><u>Time schedule maker</u></a></h1>
       
     
-       <nav id="navbar" class="navbar">
+       <nav id="navbar" class="navbar ">
         <ul>
           <li><a class="nav-link scrollto active" href="index.php">Home</a></li>
           <li class="dropdown"><a href="#"><span>logIn</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
@@ -55,7 +55,9 @@
             </ul>
           </li>
         </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
+        <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+
       </nav> 
 
     </div>
@@ -91,12 +93,12 @@
   <div class="row">
     <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
      <h2 style="color:white;">Create a proper time schedule</h2>
-      <h4 style="color:white;" >1) Add staffs</h4>
+      <h4 style="color:white;" >1) Add Table structure</h4>
       <h4 style="color:white;" >2) Add subcodes</h4>
       <h4 style="color:white;" >3) Add classes</h4>
       <h4 style="color:white;" >4) Click "generate time schedule"</h4>
       <div class="d-flex justify-content-center justify-content-lg-start">
-        <a href="index.php?info=staffs" class="btn-get-started scrollto">Get Started</a>
+        <a href="index.php?info=admin_login" class="btn-get-started scrollto">Get Started</a>
         <!-- <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox btn-watch-video"><i class="bi bi-play-circle"></i><span>Watch Video</span></a> -->
       </div> 
     
@@ -131,7 +133,7 @@
             <p>
                A great way to help you achieve the goals you have in life, both big and small.
             </p>
-            <a href="#" class="btn-learn-more">Learn More</a>
+            <a href="index.php?info=staff_login" class="btn-learn-more">Learn More</a>
           </div>
         </div>
 
@@ -147,7 +149,7 @@
           <strong><span>Time schedule maker</span></strong>
       </div>
       <div class="credits">
-        Created by <b>Aarthi</b>
+        Created by <b>Abdulla</b>
       </div>
     </div>
   </footer>

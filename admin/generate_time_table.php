@@ -7,6 +7,14 @@ header('location:../index.php');
 }
 $delete = mysqli_query($con,"truncate table time_table");
  ?>
+ <?php
+  extract($_POST);
+  if(isset($save_time_table)){
+    echo "<div>".$fixed."</div>";
+    echo "<div>".$fixed."</div>";
+    $update = mysqli_query($con,"update time_table set fixed = '1' ");
+  }
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,7 +28,22 @@ $delete = mysqli_query($con,"truncate table time_table");
     <script src="../bootstrap/js/popper.min.js" ></script>
 </head>
 <body>
-    <center><h1>Time Table</h1></center>
+    
+      <div class="row">
+        <div class="col-md-8">
+          <center>
+            <h1>Time Table</h1>
+          </center>
+          
+        </div>
+        <div class="col-md-4">
+        <form method="post" enctype="multipart/form-data">
+            <input type="hidden" name="fixed" value='1'>
+            <input class="btn btn-primary" type="submit" name="save_time_table" value="Save Time Table">
+          </form>
+        </div>
+      </div>
+    
     <?php
     
     $day_order_query = mysqli_query($con,"select * from day_orders");
@@ -74,7 +97,7 @@ $delete = mysqli_query($con,"truncate table time_table");
             
                     //test out put
                   // echo "day_order=".$day_order." ,hours =".$hour.",,class_id = ".$class_id.",,class_name =".$class_name.",,class_alias =".$class_alias.",,subject_id= ".$subject_id.",,subject_name =".$subject_name." ,,subject_alias =".$subject_alias." ,,staff_id = ". $random_subject_staff_id.",,staff_name =".$staff_name.",,staff_alias =".$staff_alias."<br>";
-                    $insert_time_table = mysqli_query($con,"insert into time_table value ('','$day_order','$hour','$class_id','$class_name','$class_alias','$subject_id','$subject_name','$subject_alias',' $random_subject_staff_id','$staff_name','$staff_alias')");
+                    $insert_time_table = mysqli_query($con,"insert into time_table value ('','$day_order','$hour','$class_id','$class_name','$class_alias','$subject_id','$subject_name','$subject_alias',' $random_subject_staff_id','$staff_name','$staff_alias','0')");
                     }
                     //end of the hours
                     $is_available_staff = mysqli_query($con,"update staffs set is_available= 1");

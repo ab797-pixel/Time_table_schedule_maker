@@ -60,6 +60,7 @@ header('location:../index.php');
           <li><a class="nav-link scrollto" href="index.php?info=classes">Classes</a></li>
           <li><a class="nav-link scrollto" href="index.php?info=subcodes">Subcodes</a></li>
           <li><a class="nav-link scrollto" href="index.php?info=class_subject">class-subject</a></li>
+          <li><a class="nav-link scrollto"  style="color:red;font-size:20px;"href="index.php?info=logout">LogOut</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav> 
@@ -94,6 +95,10 @@ header('location:../index.php');
      else if($info=="class_subject")
 	   {
 	   	include('class_subject.php');
+	   }
+     else if($info=="logout")
+	   {
+	   	include('logout.php');
 	   }
       }
       if($info==""){     

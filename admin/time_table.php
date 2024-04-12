@@ -18,13 +18,16 @@ if(isset($delete_id)){
 ?>
 <div class="container" style="margin-top:100px;">
 <div class="row">
-          <div class="col-md-8">
+          <div class="col-md-6">
           <div class="section-title">
           <h2>Class-subject List</h2>
         </div>
           </div>
-          <div class="col-md-4">
-          <a href="generate_time_table.php" class="btn btn-primary">Generate time_table</a>
+          <div class="col-md-3">
+          <a href="generate_time_table.php"  target="_blank" class="btn btn-primary">Generate time_table</a>
+          </div>
+          <div class="col-md-3">
+          <a href="index.php?info=view_time_table"  class="btn btn-primary">View time_table</a>
           </div>
          </div>
 

@@ -4,29 +4,29 @@
  session_start();
  include('db.php');
                
-               if (isset($submit))
-                   {
+       if (isset($submit))
+           {
+               
+              $query 		= mysqli_query($con, "SELECT * FROM admin WHERE  password='$password' and email='$user_name'");
+              $row		= mysqli_fetch_array($query);
+              $num_row 	= mysqli_num_rows($query);
+               
+               if ($num_row > 0) 
+                   {			
+                       $_SESSION['id']=$row['id'];
+                       header('location:admin');
                        
-                      $query 		= mysqli_query($con, "SELECT * FROM admin WHERE  password='$password' and email='$user_name'");
-                      $row		= mysqli_fetch_array($query);
-                      $num_row 	= mysqli_num_rows($query);
-                       
-                       if ($num_row > 0) 
-                           {			
-                               $_SESSION['id']=$row['id'];
-                               header('location:admin');
-                               
-                           }
-                       else
-                           {
-                               echo "<div class='alert alert-danger alert-dismissible' role='alert'>
-                               Invalid Username and Password
-                               <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
-                                   <span aria-hidden='true'>&times;</span>
-                               </button>
-                               </div>";
-                           }
                    }
+               else
+                   {
+                       echo "<div class='alert alert-danger alert-dismissible' role='alert'>
+                       Invalid Username and Password
+                       <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
+                           <span aria-hidden='true'>&times;</span>
+                       </button>
+                       </div>";
+                   }
+           }
           
 
 ?>

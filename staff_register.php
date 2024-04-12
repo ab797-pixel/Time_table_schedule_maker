@@ -56,10 +56,10 @@
              <h2 class="section-header">Staff Registeration</h2>
 
             <div class="form-outline mb-4">
-             <?php $staff_name="";?> <input type="text" name="staff_name" class="form-control form-control-lg"  placeholder="Name 'J.Mohamed Abdulla'" required>
+             <?php $staff_name="";?> <input type="text" name="staff_name" class="form-control form-control-lg"  placeholder="Name 'M. AARTHI'" required>
             </div>
             <div class="form-outline mb-4">
-            <?php $staff_alias="";?> <input type="text" name="staff_alias" class="form-control form-control-lg"  placeholder="Alias 'J.M.A'">
+            <?php $staff_alias="";?> <input type="text" name="staff_alias" class="form-control form-control-lg"  placeholder="Alias 'M.A'">
             </div>
             <div class="form-outline mb-4">
             <?php $staff_email="";?><input type="email" name="staff_email" class="form-control form-control-lg"  placeholder="Email" required>

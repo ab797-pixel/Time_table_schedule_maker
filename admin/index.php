@@ -61,6 +61,7 @@ header('location:../index.php');
           <li><a class="nav-link scrollto" href="index.php?info=staffs">Staffs</a></li>
           <li><a class="nav-link scrollto" href="index.php?info=subcodes">Subcodes</a></li>
           <li><a class="nav-link scrollto" href="index.php?info=time_table">Time Table</a></li>
+          <li><a class="nav-link scrollto"  style="color:red;font-size:20px;"href="index.php?info=logout">LogOut</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav> 
@@ -106,6 +107,14 @@ header('location:../index.php');
      else if($info=="table_structure")
 	   {
 	   	include('table_structure.php');
+	   }
+     else if($info=="view_time_table")
+	   {
+	   	include('view_time_table.php');
+	   }
+     else if($info=="logout")
+	   {
+	   	include('logout.php');
 	   }
      
       }
@@ -234,7 +243,7 @@ header('location:../index.php');
    // echo "cont" .$day_order_count;
    mysqli_query($con,"delete from hours");
    for($cj = 0; $cj < $hours_count; $cj++){
-    echo "loop".$cj."<br>";
+
      $hours1 = $hours[$cj];
     $insert_query = mysqli_query($con,"insert into hours values('','$hours1')");
    }
@@ -249,7 +258,7 @@ header('location:../index.php');
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
      <form method="post"  enctype="multipart/form-data">
-      <div class="modal-body" id="tab_logic">
+      <div class="modal-body" >
          <div class="mb-3">
           <div class="row">
             <div class="col-md-6">
@@ -316,9 +325,9 @@ header('location:../index.php');
       i++;
     });
 
-      
+    var j=1;
      $("#add_hours").click(function(){
-      var j=1;
+      
        $('#hours'+j).html('Hours'+j+'<input class="form-control" name="hours['+j+']" placeholder="Enter List Of Hours'+j+' " required>');
 
       $('#tab_logic1').append('<div class="row" id="hours'+(j+1)+'"></div>');

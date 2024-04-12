@@ -1,6 +1,7 @@
 <?php
 include('db.php');
 session_start();
+
 extract($_POST);
 if(isset($submit)){
     $query 		= mysqli_query($con, "SELECT * FROM staffs WHERE  password='$password' and email='$email'");
